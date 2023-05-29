@@ -283,3 +283,4 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.genrunti
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\ref\Pattern.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll

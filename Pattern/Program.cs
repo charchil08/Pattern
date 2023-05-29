@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Pattern;
 using Pattern.Entity.Data;
 using Pattern.Repository;
 using Pattern.Repository.Interface;
@@ -22,6 +23,10 @@ builder.Services.AddDbContext<PatternContext>(options => options.UseSqlServer(
     ));
 
 
+//session
+builder.Services.AddSession();
+
+
 builder.Services.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
 
 builder.Services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
@@ -34,22 +39,8 @@ builder.Services.AddScoped<IAccountRepo, AccountRepo>();
 builder.Services.AddScoped<ISkillService, SkillService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 
-
-//Authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["JwtSetting:Issuer"],
-        ValidAudience = builder.Configuration["JwtSetting:Issuer"],
-        RequireExpirationTime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSetting:SecretKey"])),
-    };
-});
+//Authorization middleware
+builder.Services.AddScoped<AuthorizeMiddleware>();
 
 var app = builder.Build();
 
@@ -61,12 +52,15 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication();
+
+app.UseMiddleware<AuthorizeMiddleware>();
 
 app.MapControllerRoute(
     name: "default",

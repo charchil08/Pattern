@@ -38,8 +38,31 @@ namespace Pattern.Controllers
                 return View(user);
             }
             GenerateCookie(userDTO);
-            return Ok(userDTO);
+
+            if (!string.IsNullOrWhiteSpace(returnUrl))
+            {
+                return RedirectToAction(returnUrl);
+            }
+
+            if(userDTO.Role == "admin" && userDTO.Position=="admin") 
+            {
+                return RedirectToAction("Index", "Skill");
+            }
+            return RedirectToAction("Index","Home");
         }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            if (Request.Cookies["auth"] != null)
+            {
+                TempData["warning"] = "Logout successful!";
+                Response.Cookies.Delete("auth");
+            }
+            return RedirectToAction("Index", new LoginVM());
+
+        }
+
 
         private void GenerateCookie(UserDTO userDTO)
         {
@@ -56,18 +79,6 @@ namespace Pattern.Controllers
             };
 
             HttpContext.Response.Cookies.Append("auth", authToken, cookieOptions);
-
-        }
-
-        [HttpGet]
-        public IActionResult Logout()
-        {
-            if (Request.Cookies["auth"] != null)
-            {
-                TempData["warning"] = "Logout successful!";
-                Response.Cookies.Delete("auth");
-            }
-            return RedirectToAction("Index", new LoginVM());
 
         }
     }

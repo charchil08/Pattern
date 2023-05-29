@@ -8,6 +8,7 @@ namespace Pattern.Utility
 {
     public class JwtHelper
     {
+
         public static string GenerateToken(JwtSetting jwtSetting, UserDTO user)
         {
             if (jwtSetting == null)
@@ -34,6 +35,35 @@ namespace Pattern.Utility
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(authToken);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public ClaimsPrincipal? ValidateJwtToken(string token, string secretKey)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            //var key = Encoding.ASCII.GetBytes(_configuration.GetSection("JwtSetting")["SecretKey"]);
+            var key = Encoding.ASCII.GetBytes(secretKey);
+
+            var validationParameters = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ClockSkew = TimeSpan.Zero
+            };
+
+            //var claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
+            //return claimsPrincipal;
+
+            var principal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
+            
+            return principal;
         }
     }
 }

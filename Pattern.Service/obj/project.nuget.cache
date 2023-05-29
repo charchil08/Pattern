@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AekZ+aeNrDs6BJ65frp2zUWGgWjjbl+d+43nUdqf1m/sVm+NzHfo/zspstTC4MNVfiNpng6/d7suKWLbhTAMJQ==",
+  "dgSpecHash": "0Sk086wBh0go4Dorkk+XbpO3pIpnr/31uufX7ezQ1t2P1ipgNmVFtazEue+6nbetr86dKBb4/2lbG3bXEx1D7w==",
   "success": true,
   "projectFilePath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Service\\Pattern.Service.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\pci141\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.16\\microsoft.entityframeworkcore.tools.6.0.16.nupkg.sha512",
     "C:\\Users\\pci141\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\pci141\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\pci141\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\pci141\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\pci141\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\pci141\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
