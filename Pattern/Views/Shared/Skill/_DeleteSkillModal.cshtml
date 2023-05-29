@@ -1,0 +1,22 @@
+﻿@model UpsertSkillVm
+<div class="modal fade" id="btnSkillDeleteModal-@Model.Id" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Conformation</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Are you sure to delete skill ?</h4>
+                <div class="form-text">You will never again get it</div>
+                <form method="get" asp-action="Delete" asp-controller="Skill">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="d-flex justify-content-end align-items-center my-2">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <input type="submit" class="btn btn-danger" value="Yes" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

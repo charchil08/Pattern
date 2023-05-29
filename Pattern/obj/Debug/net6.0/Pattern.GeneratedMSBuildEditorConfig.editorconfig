@@ -1,0 +1,77 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Pattern
+build_property.RootNamespace = Pattern
+build_property.ProjectDir = D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/Skill/_AddSkillModalPv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNraWxsXF9BZGRTa2lsbE1vZGFsUHYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/Skill/_DeleteSkillModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNraWxsXF9EZWxldGVTa2lsbE1vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/Skill/_EditSkillModalPv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNraWxsXF9FZGl0U2tpbGxNb2RhbFB2LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/Skill/_Filters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNraWxsXF9GaWx0ZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/Skill/_SkillList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFNraWxsXF9Ta2lsbExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/_AlertNotification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGVydE5vdGlmaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/_Pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Skill/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2tpbGxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-0ugjqfzrw9

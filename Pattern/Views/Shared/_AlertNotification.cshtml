@@ -1,0 +1,150 @@
+﻿<script>
+    let notifyOptions = {
+        // whether to hide the notification on click
+        clickToHide: true,
+        // whether to auto-hide the notification
+        autoHide: true,
+        // if autoHide, hide after milliseconds
+        autoHideDelay: 5000,
+        // show the arrow pointing at the element
+        arrowShow: true,
+        // arrow size in pixels
+        arrowSize: 5,
+        // position defines the notification position though uses the defaults below
+        position: 'bottom-right',
+        // default positions
+        elementPosition: 'bottom left',
+        globalPosition: 'top right',
+        // default style
+        style: 'bootstrap',
+        // default class (string or [string])
+        className: 'error',
+        // show animation
+        showAnimation: 'slideDown',
+        // show animation duration
+        showDuration: 200,
+        // hide animation
+        hideAnimation: 'slideUp',
+        // hide animation duration
+        hideDuration: 200,
+        // padding between element and notification
+        gap: 2
+    }
+</script>
+
+@if (TempData["success"] != null)
+{
+    <script src="~/js/notify.js"></script>
+    <script type="text/javascript">
+        $.notify('@TempData["success"]', {
+            // whether to hide the notification on click
+            clickToHide: true,
+            // whether to auto-hide the notification
+            autoHide: true,
+            // if autoHide, hide after milliseconds
+            autoHideDelay: 5000,
+            // show the arrow pointing at the element
+            arrowShow: true,
+            // arrow size in pixels
+            arrowSize: 5,
+            // position defines the notification position though uses the defaults below
+            position: 'top-right',
+            // default positions
+            elementPosition: 'bottom left',
+            globalPosition: 'top right',
+            // default style
+            style: 'bootstrap',
+            // default class (string or [string])
+            className: 'success',
+            // show animation
+            showAnimation: 'slideDown',
+            // show animation duration
+            showDuration: 200,
+            // hide animation
+            hideAnimation: 'slideUp',
+            // hide animation duration
+            hideDuration: 200,
+            // padding between element and notification
+            gap: 2
+        });
+    </script>
+}
+
+@if (TempData["error"] != null)
+{
+    <script src="~/js/notify.js"></script>
+    <script type="text/javascript">
+        $.notify('@TempData["error"]', {
+            // whether to hide the notification on click
+            clickToHide: true,
+            // whether to auto-hide the notification
+            autoHide: true,
+            // if autoHide, hide after milliseconds
+            autoHideDelay: 5000,
+            // show the arrow pointing at the element
+            arrowShow: true,
+            // arrow size in pixels
+            arrowSize: 5,
+            // position defines the notification position though uses the defaults below
+            position: 'top-right',
+            // default positions
+            elementPosition: 'bottom left',
+            globalPosition: 'top right',
+            // default style
+            style: 'bootstrap',
+            // default class (string or [string])
+            className: 'error',
+            // show animation
+            showAnimation: 'slideDown',
+            // show animation duration
+            showDuration: 200,
+            // hide animation
+            hideAnimation: 'slideUp',
+            // hide animation duration
+            hideDuration: 200,
+            // padding between element and notification
+            gap: 2
+
+        });
+    </script>
+}
+
+@if (TempData["warning"] != null)
+{
+    <script src="~/js/notify.js"></script>
+    <script type="text/javascript">
+        $.notify('@TempData["warning"]', {
+            // whether to hide the notification on click
+            clickToHide: true,
+            // whether to auto-hide the notification
+            autoHide: true,
+            // if autoHide, hide after milliseconds
+            autoHideDelay: 5000,
+            // show the arrow pointing at the element
+            arrowShow: true,
+            // arrow size in pixels
+            arrowSize: 5,
+            // position defines the notification position though uses the defaults below
+            position: 'top-right',
+            // default positions
+            elementPosition: 'bottom left',
+            globalPosition: 'top right',
+            // default style
+            style: 'bootstrap',
+            // default class (string or [string])
+            className: 'warn',
+            // show animation
+            showAnimation: 'slideDown',
+            // show animation duration
+            showDuration: 200,
+            // hide animation
+            hideAnimation: 'slideUp',
+            // hide animation duration
+            hideDuration: 200,
+            // padding between element and notification
+            gap: 2
+
+        });
+    </script>
+}
+

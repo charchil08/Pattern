@@ -1,0 +1,21 @@
+﻿@model SkillPageVM
+
+@{
+    ViewData["Title"] = "Skill Page";
+}
+
+<div class="container">
+    <partial name="_AlertNotification" />
+    <div class="my-2">
+        <partial name="Skill/_Filters" model="Model.Filters" />
+    </div>
+    <div class="my-2">
+        <div id="SkillListPv">
+            <partial name="Skill/_SkillList" model="Model.Skills" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/skill.js"></script>
+}

@@ -1,0 +1,67 @@
+﻿@model PageListVM<UpsertSkillVm>
+@{
+    UpsertSkillVm upsertSkillVm = new();
+}
+<partial name="_ValidationScriptsPartial" />
+<div class="table-responsive px-0">
+
+    <div class=" my-2 d-flex justify-content-between">
+        <h4 class="text-primary text-decoration-underline">Skill Records (@Model.TotalRecords)</h4>
+        <button type="button" class="border btn btn-primary btnSkillAddModal d-flex justify-content-center align-items-center"  id="btnSkillAdd" data-bs-toggle="modal" data-bs-target="#btnSkillAddModal">
+            <i class="bi bi-plus"></i>
+            <span>Add</span>
+        </button>
+    
+        <partial name="Skill/_AddSkillModalPv" model="@upsertSkillVm" />
+
+    </div>
+
+    <table class="my-4 table px-3 border">
+        <thead>
+            <tr class="table-secondary py-1">
+                <th scope="col">Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (UpsertSkillVm item in Model.Records)
+            {
+                <tr class="skillSummary py-1" id="skill-@item.Id">
+                    <td class="fw-bold">@item.Name</td>
+                    <td>
+                        @if (@item.Status)
+                        {
+                            <span style="color:green;">Active</span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">Inactive</span>
+                        }
+                    </td>
+                    <td>
+                        @*Edit Skill Modal*@
+                        <!-- Button trigger modal -->
+                        <button type="button" class="border-0 btnSkillEditModal" style="color:orange;background:transparent;" id="btnSkillEdit-@item.Id" data-skill-id="@item.Id" data-bs-toggle="modal" data-bs-target="#btnSkillEditModal-@item.Id">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+
+                        <button class="border-0 btnSkillDeleteModal" style="color:red;background:transparent;" data-bs-toggle="modal" data-bs-target="#btnSkillDeleteModal-@item.Id" id="btnSkillDelete-@item.Id"
+                            data-skillid="@item.Id">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    
+                        <partial name="Skill/_EditSkillModalPv" model="@item" />
+                        <partial name="Skill/_DeleteSkillModal" model="@item" />
+                    
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <partial name="_Pagination" model="Math.Ceiling((double)(Model.TotalRecords / (double)Model.PageSize))" />
+</div>

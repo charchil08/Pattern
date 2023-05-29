@@ -1,0 +1,41 @@
+﻿@model UpsertSkillVm
+
+@*<partial name="_ValidationScriptsPartial" />*@
+<div class="modal fade" id="btnSkillEditModal-@Model.Id" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="skillEditModalBody-@Model.Id" asp-action="Upsert" asp-controller="Skill" method="post">
+                    <div class="form-group">
+                        <div class="row mb-3 px-2">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" id="Name-@Model.Id" class="form-control" />
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row mb-3 px-2">
+                            <label asp-for="Status" class="form-label"></label>
+                            <select class="form-select" id="Status-@Model.Id" asp-for="Status">
+                                <option selected=@(Model.Status==true)  value="true">Active</option>
+                                <option selected=@(Model.Status==false) value="false">Inactive</option>
+                            </select>
+                            <span asp-validation-for="Status"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" asp-for="Id" id="Id-@Model.Id" />
+                        <input type="hidden" asp-for="CreatedAt" id="CreatedAt-@Model.Id" />
+                    </div>
+                    <div class="text-end row my-2 px-2"></div>
+                    <input type="submit" class="btn btn-primary" value="Save" />
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

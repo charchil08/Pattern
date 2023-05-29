@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+<nav aria-label="Page navigation example" style="
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+">
+    <div class="form-group">
+        <label class="form-label" for="pageSizeDropdown" >Page size</label>
+        <select id="pageSizeDropdown" class="justify-content-start" onchange="changePageSize()">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+
+    <ul class="pagination justify-content-end">
+        <li class="page-item disabled">
+            <button class="page-link" onclick="gotoPrevNextPage(false)">Previous</button>
+        </li>
+        @for (int i = 1; i <= (int)Model; i++)
+        {
+            <li class="page-item" id="pageItem@(i)" onclick="gotoPage(@i)"><button type="button" class="page-link">@i</button></li>
+        }
+        <li class="page-item">
+            <button class="page-link" type="button" onclick="gotoPrevNextPage(true)">Next</button>
+        </li>
+    </ul>
+</nav>

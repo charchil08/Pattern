@@ -1,0 +1,66 @@
+﻿@model FilterParamsVM
+
+<div class="container px-0">
+    <form class="form" novalidate id="skillFilterForm" method="post" asp-action="GetList" asp-controller="Skill" >
+        <div class="border border-primary d-flex flex-wrap justify-content-between p-2">
+            <div class="form-group">
+                <label asp-for="ContainSearch" class="form-label"></label>
+                <input asp-for="ContainSearch" class="form-control" />
+                <span class="text-danger" asp-validation-for="ContainSearch"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="form-label"></label>
+                <input asp-for="StartDate" placeholder="Enter from date" class="form-control" />
+                <span class="text-danger" asp-validation-for="StartDate"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="form-label"></label>
+                <input asp-for="EndDate" placeholder="Enter to date" class="form-control" />
+                <span class="text-danger" asp-validation-for="EndDate"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="form-label"></label>
+                <select asp-for="Status" class="form-control" >
+                    <option value="0">Select Status</option>
+                    <option value="1">Active</option>
+                    <option value="2">Inactive</option>
+                </select>
+                <span class="text-danger" asp-validation-for="Status"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SortCol" class="form-label"></label>
+                <select asp-for="SortCol" class="form-control" >
+                    <option value="name">Select option</option>
+                    <option value="name">Name</option>
+                    <option value="created_at">Creation Date</option>
+                </select>
+                <span class="text-danger" asp-validation-for="SortCol"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SortDesc" class="form-label"></label>
+                <select asp-for="SortDesc" class="form-control" >
+                    <option value="false">Sorting order</option>
+                    <option value="false">ASC</option>
+                    <option value="true">DESC</option>
+                </select>
+                <span class="text-danger" asp-validation-for="SortDesc"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="PageIndex" type="hidden" />
+            </div>
+
+            <div class="form-group">
+                <input asp-for="PageSize" type="hidden" />
+            </div>
+
+            <input type="button" value="search" onclick="formSubmit(false)" class="btn btn-primary" style="
+    height: fit-content;
+    align-self: self-end;
+">
+            <input type="reset" class="btn btn-warning" style="
+    height: fit-content;
+    align-self: self-end;" >
+        </div>
+    </form>
+</div>

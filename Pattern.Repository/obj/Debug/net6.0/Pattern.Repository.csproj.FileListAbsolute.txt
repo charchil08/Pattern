@@ -1,0 +1,15 @@
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\bin\Debug\net6.0\Pattern.Repository.deps.json
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\bin\Debug\net6.0\Pattern.Repository.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\bin\Debug\net6.0\Pattern.Repository.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\bin\Debug\net6.0\Pattern.Entity.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\bin\Debug\net6.0\Pattern.Entity.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.csproj.AssemblyReference.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.AssemblyInfoInputs.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.AssemblyInfo.cs
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.csproj.CoreCompileInputs.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.csproj.CopyComplete
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\refint\Pattern.Repository.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\Pattern.Repository.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Repository\obj\Debug\net6.0\ref\Pattern.Repository.dll

@@ -1,0 +1,14 @@
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\bin\Debug\net6.0\Pattern.Entity.deps.json
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\bin\Debug\net6.0\Pattern.Entity.runtimeconfig.json
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\bin\Debug\net6.0\Pattern.Entity.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\bin\Debug\net6.0\Pattern.Entity.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.csproj.AssemblyReference.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.AssemblyInfoInputs.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.AssemblyInfo.cs
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.csproj.CoreCompileInputs.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\refint\Pattern.Entity.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\Pattern.Entity.genruntimeconfig.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Entity\obj\Debug\net6.0\ref\Pattern.Entity.dll
