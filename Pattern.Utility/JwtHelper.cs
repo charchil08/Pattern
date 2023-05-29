@@ -8,7 +8,7 @@ namespace Pattern.Utility
 {
     public class JwtHelper
     {
-        public static string GenerateToken(JwtSetting jwtSetting/*, User user*/)
+        public static string GenerateToken(JwtSetting jwtSetting, UserDTO user)
         {
             if (jwtSetting == null)
                 return string.Empty;
@@ -18,9 +18,12 @@ namespace Pattern.Utility
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name, ""),
-                new Claim(ClaimTypes.Email, ""),
-                new Claim(ClaimTypes.Role, ""),
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Email,user.Email),
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim(ClaimTypes.Actor, user.Position),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+
             };
 
             var authToken = new JwtSecurityToken(

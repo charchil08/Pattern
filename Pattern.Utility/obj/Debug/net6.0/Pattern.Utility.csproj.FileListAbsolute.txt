@@ -10,3 +10,6 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\obj\Debug\net6.0\Pattern.
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\obj\Debug\net6.0\refint\Pattern.Utility.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\obj\Debug\net6.0\Pattern.Utility.pdb
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\obj\Debug\net6.0\ref\Pattern.Utility.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\bin\Debug\net6.0\Pattern.DTO.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\bin\Debug\net6.0\Pattern.DTO.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern.Utility\obj\Debug\net6.0\Pattern.Utility.csproj.CopyComplete

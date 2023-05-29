@@ -281,3 +281,5 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\refint\Pattern.d
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.pdb
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.genruntimeconfig.cache
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\ref\Pattern.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

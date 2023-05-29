@@ -16,6 +16,9 @@ namespace Pattern
             CreateMap<FilterParamsVM, FilterParams>();
             CreateMap(typeof(PageListVM<>), typeof(PageList<>));
             CreateMap(typeof(PageList<>), typeof(PageListVM<>));
+
+            CreateMap<LoginVM, LoginDTO>();
+            CreateMap<User, UserDTO>();
         }
     }
 }

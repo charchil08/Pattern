@@ -28,9 +28,11 @@ builder.Services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
 
 //Repo
 builder.Services.AddScoped<ISkillRepo, SkillRepo>();
+builder.Services.AddScoped<IAccountRepo, AccountRepo>();
 
 //Service
 builder.Services.AddScoped<ISkillService, SkillService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 
 //Authentication
@@ -68,6 +70,6 @@ app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Index}/{id?}");
 
 app.Run();

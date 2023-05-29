@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CHARCHIL/Tatvasoft-Training/Pattern/Pattern/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
