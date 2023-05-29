@@ -4,14 +4,14 @@
     "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj": {}
   },
   "projects": {
-    "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj": {
+    "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.DTO\\Pattern.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj",
-        "projectName": "Pattern.Utility",
-        "projectPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj",
+        "projectUniqueName": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.DTO\\Pattern.DTO.csproj",
+        "projectName": "Pattern.DTO",
+        "projectPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.DTO\\Pattern.DTO.csproj",
         "packagesPath": "C:\\Users\\pci141\\.nuget\\packages\\",
-        "outputPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\obj\\",
+        "outputPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -44,6 +44,90 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj",
+        "projectName": "Pattern.Utility",
+        "projectPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\Pattern.Utility.csproj",
+        "packagesPath": "C:\\Users\\pci141\\.nuget\\packages\\",
+        "outputPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pci141\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.DTO\\Pattern.DTO.csproj": {
+                "projectPath": "D:\\CHARCHIL\\Tatvasoft-Training\\Pattern\\Pattern.DTO\\Pattern.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.30.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.30.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
