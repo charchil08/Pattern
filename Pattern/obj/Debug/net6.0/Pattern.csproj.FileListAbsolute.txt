@@ -1,11 +1,3 @@
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.csproj.AssemblyReference.cache
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.GeneratedMSBuildEditorConfig.editorconfig
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.AssemblyInfoInputs.cache
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.AssemblyInfo.cs
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.csproj.CoreCompileInputs.cache
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.MvcApplicationPartsAssemblyInfo.cache
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.RazorAssemblyInfo.cache
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.RazorAssemblyInfo.cs
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\appsettings.Development.json
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\appsettings.json
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Pattern.staticwebassets.runtime.json
@@ -19,6 +11,7 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\AutoMapper.Exten
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Humanizer.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\MessagePack.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Build.dll
@@ -46,8 +39,10 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Entity
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -265,6 +260,14 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Pattern.Service.
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Pattern.Utility.pdb
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Pattern.DTO.pdb
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Pattern.Repository.pdb
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.csproj.AssemblyReference.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.AssemblyInfoInputs.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.AssemblyInfo.cs
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.csproj.CoreCompileInputs.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.MvcApplicationPartsAssemblyInfo.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.RazorAssemblyInfo.cache
+D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.RazorAssemblyInfo.cs
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\staticwebassets\msbuild.Pattern.Microsoft.AspNetCore.StaticWebAssets.props
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\staticwebassets\msbuild.build.Pattern.props
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Pattern.props
@@ -281,6 +284,3 @@ D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\refint\Pattern.d
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.pdb
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\Pattern.genruntimeconfig.cache
 D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\obj\Debug\net6.0\ref\Pattern.dll
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-D:\CHARCHIL\Tatvasoft-Training\Pattern\Pattern\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll

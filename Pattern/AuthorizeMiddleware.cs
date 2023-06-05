@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Newtonsoft.Json;
 using Pattern.Utility;
 using System.Security.Claims;
 
@@ -17,64 +18,108 @@ namespace Pattern
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
-            string path = context.Request.Path.Value ?? "/Account/";
+            string path = context.Request.Path.Value ?? "/Account";
+
+            ITempDataDictionary tempData = _tempDataFactory.GetTempData(context);
+            string token = context.Request.Cookies["auth"] ?? "";
 
 
-            if (path == "/" || path == "/Account/" || path == "/Account/Index" || path == "/Home/Index" || path == "/Home/Privacy")
+            if (IsBypassPath(path))
             {
-                // Bypass authentication for specific paths
+                if(!string.IsNullOrWhiteSpace(token))
+                {
+                    string previousUrl = context.Request.Headers["Referer"].ToString();
+                    if(string.IsNullOrWhiteSpace(previousUrl))
+                    {
+                        previousUrl = "/Home";
+                    }
+                    context.Response.Redirect(previousUrl);
+                    return;
+                }
+
                 await next(context);
                 return;
             }
 
-            // Extract the token from the request, such as from a header or query string
-            string token = context.Request.Cookies["auth"] ?? "";
-
+            
             if (string.IsNullOrWhiteSpace(token))
             {
-                // Redirect to login if no token is provided
-                string returnUrl = context.Request.Path + context.Request.QueryString;
-                context.Response.Redirect($"/Account/?returnUrl={returnUrl}");
+                bool isXmlHttpRequest = context.Request.Headers["X-Requested-With"] == "XMLHttpRequest";
+
+                if(isXmlHttpRequest)
+                {
+                    RedirectUnAuthorizedOnAjaxCall(context);
+                    return;
+                }
+                
+                RedirectToLogin(context, tempData);
                 return;
             }
 
-
-            // Validate the token and get the claims
-            string secrectKey = _configuration.GetValue<string>("JwtSetting:SecretKey");
+            string secretKey = _configuration.GetValue<string>("JwtSetting:SecretKey");
             JwtHelper jwtHelper = new JwtHelper();
-            ClaimsPrincipal? claimsPrincipal = jwtHelper.ValidateJwtToken(token, secrectKey);
+            ClaimsPrincipal? claimsPrincipal = jwtHelper.ValidateJwtToken(token, secretKey);
 
-            if (claimsPrincipal == null || !claimsPrincipal.Identity!.IsAuthenticated)
+
+            if (IsTokenInvalid(claimsPrincipal))
             {
-                // Redirect to login if token validation fails
-                string returnUrl = context.Request.Path + context.Request.QueryString;
-                context.Response.Redirect($"/Account/Index?returnUrl={returnUrl}");
-                context.Response.Headers.Add("Unauthorized", "true");
+                RedirectToLogin(context, tempData);
                 return;
             }
 
-
-            // Set the user claims in the context
-            context.User = claimsPrincipal;
-
+            context.User = claimsPrincipal!;
+            
 
             if (path.StartsWith("/Skill"))
             {
                 bool isRoleAdmin = context.User.IsInRole("admin");
-                bool isActorAdmin = context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Actor).Value == "admin";
+                bool isActorAdmin = context.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Actor)!.Value == "admin";
 
                 if (!isRoleAdmin || !isActorAdmin)
                 {
-                    //ITempDataDictionary tempData = _tempDataFactory.GetTempData(context);
-                    string previousUrl = context.Request.Headers["Referer"].ToString();
-                    //tempData["error"] = "You are not authorized to open this page!";
-                    context.Response.Redirect(previousUrl);
-                    context.Response.Headers.Add("Unauthorized", "true");
+                    RedirectToUnauthorized(context, tempData);
                     return;
                 }
             }
 
             await next(context);
+        }
+
+
+        private bool IsBypassPath(string path)
+        {
+            string[] bypassPaths = { "/Account", "/Account/Index"};
+            return bypassPaths.Contains(path);
+        }
+
+        private void RedirectUnAuthorizedOnAjaxCall(HttpContext context)
+        {
+            context.Response.StatusCode = 403;
+            context.Response.ContentType = "application/json";
+            context.Response.WriteAsync(JsonConvert.SerializeObject(new { expiredToken = true }));
+            context.Response.Redirect($"/Account");
+
+        }
+
+        private void RedirectToLogin(HttpContext context, ITempDataDictionary tempData)
+        {
+            string returnUrl = context.Request.Path + context.Request.QueryString;
+            tempData["error"] = "Login first !";
+
+            context.Response.Redirect($"/Account?returnUrl={returnUrl}");
+        }
+
+        private bool IsTokenInvalid(ClaimsPrincipal? claimsPrincipal)
+        {
+            return claimsPrincipal == null || !claimsPrincipal.Identity!.IsAuthenticated;
+        }
+
+        private void RedirectToUnauthorized(HttpContext context, ITempDataDictionary tempData)
+        {
+            string previousUrl = context.Request.Headers["Referer"].ToString();
+            tempData["error"] = "You are not authorized to open this page!";
+            context.Response.Headers.Add("Unauthorized", "true");
+            context.Response.Redirect(previousUrl);
         }
     }
 }

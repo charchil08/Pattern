@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Simplification;
 using Pattern.DTO;
 using Pattern.Models;
 using Pattern.Service.Interface;
@@ -22,13 +23,18 @@ namespace Pattern.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index([FromQuery] string? returnUrl="")
         {
+            if(!string.IsNullOrWhiteSpace(returnUrl))
+            {
+                TempData["returnUrl"] = returnUrl;
+            }
+
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Index([FromForm] LoginVM user, [FromQuery] string returnUrl = "")
+        public async Task<IActionResult> Index([FromForm] LoginVM user)
         {
             LoginDTO loginDTO = _mapper.Map<LoginDTO>(user);
             var userDTO = await _service.LoginAsync(loginDTO);
@@ -39,25 +45,38 @@ namespace Pattern.Controllers
             }
             GenerateCookie(userDTO);
 
+            TempData["success"] = "Logged in!";
+
+            string returnUrl = TempData["returnUrl"]?.ToString() ?? string.Empty;
             if (!string.IsNullOrWhiteSpace(returnUrl))
             {
-                return RedirectToAction(returnUrl);
+                return Redirect(returnUrl);
             }
 
-            if(userDTO.Role == "admin" && userDTO.Position=="admin") 
+
+            if (userDTO.Role == "admin" && userDTO.Position=="admin") 
             {
                 return RedirectToAction("Index", "Skill");
-            }
+            }   
             return RedirectToAction("Index","Home");
         }
 
+        /// <summary>
+        /// Take returnUrl as queryString
+        /// </summary>
+        /// <param name="returnUrl"></param>
+        /// <returns></returns>
         [HttpGet]
-        public IActionResult Logout()
+        public IActionResult Logout(string? returnUrl)
         {
             if (Request.Cookies["auth"] != null)
             {
                 TempData["warning"] = "Logout successful!";
                 Response.Cookies.Delete("auth");
+            }
+            if(!string.IsNullOrWhiteSpace(returnUrl))
+            {
+                return RedirectToAction(returnUrl);
             }
             return RedirectToAction("Index", new LoginVM());
 

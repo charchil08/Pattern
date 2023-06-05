@@ -45,13 +45,13 @@ namespace Pattern.Controllers
             return PartialView("Skill/_SkillList", pageListVm);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Upsert(int id)
-        {
-            Skill skill = await _service.FindByIdAsync(id);
-            UpsertSkillVm skillVm = _mapper.Map<UpsertSkillVm>(skill);
-            return Ok();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> Upsert(int id)
+        //{
+        //    Skill skill = await _service.FindByIdAsync(id);
+        //    UpsertSkillVm skillVm = _mapper.Map<UpsertSkillVm>(skill);
+        //    return Ok();
+        //}
 
 
         [HttpPost]

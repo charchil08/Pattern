@@ -14,13 +14,17 @@ function getListAjax() {
         data: formData,
         success: function (data) {
             debugger;
-            $("#SkillListPv").html(data);
-            handlePageSize();
-            handlePagination();
+
+                $("#SkillListPv").html(data);
+                handlePageSize();
+                handlePagination();
         },
-        error: function (err) {
+        error: function (xhr, textStatus, errorThrown) {
             debugger;
-            alert(err.responseText);
+            if (xhr.status == 401) {
+                location.href = "/Account/Index";
+            }
+          location.href = "/Account/Index";
         },
         complete: function () {
             debugger;

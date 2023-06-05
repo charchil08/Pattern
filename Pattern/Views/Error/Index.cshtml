@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewData["Title"] = "Page not found";
+}
+
+<div class="position-absolute top-50 start-50 translate-middle-x translate-middle-y">
+    <h3 class="text-danger">Page Not Found with status code : @ViewBag.StatusCode</h3>
+    <br />
+    <a class="btn btn-primary" asp-action="Index" asp-controller="Home">Go Back</a>
+</div>
